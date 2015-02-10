@@ -7,6 +7,6 @@ public class Tasc1 {
     public static void main(String[] args){
         int a;
         char d;
-        System.out.print("");
+        System.out.print("Их нельзя напечатать");
     }
 }
