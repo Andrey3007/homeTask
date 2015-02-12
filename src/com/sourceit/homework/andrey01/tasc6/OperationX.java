@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * Created by Андрей on 11.02.2015.
+ * •	Создать программу, выводящую на экран ближайшее к 10 из двух чисел, записанных в переменные m и n.
+ * Например, среди чисел 8,5 и 11,45 ближайшее к десяти 11,45 (n и m – вводит пользователь).
  */
 public class OperationX {
     public static void main(String[] args) {

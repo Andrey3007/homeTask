@@ -2,6 +2,8 @@ package com.sourceit.homework.andrey01.tasc7;
 
 /**
  * Created by Андрей on 11.02.2015.
+ * •	Создать программу, которая будет проверять попало ли случайно выбранное из отрезка [5;155] целое число
+ * в интервал (25;100) и сообщать результат на экран.
  */
 public class CheckInterval {
     public static void main(String[] args) {

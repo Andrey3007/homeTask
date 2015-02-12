@@ -2,6 +2,8 @@ package com.sourceit.homework.andrey01.tasc3;
 import java.io.*;
 /**
  * Created by Андрей on 10.02.2015.
+ * •	Создать программу, проверяющую и сообщающую на экран, является ли целое число, записанное в переменную n,
+ * чётным либо нечётным (n – вводит пользователь).
  */
 public class checking {
     public static void main(String[] args) throws IOException {

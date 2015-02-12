@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * Created by Андрей on 11.02.2015.
+ * •	Для введённого пользователем с клавиатуры натурального числа посчитайте сумму всех его цифр
+ * (заранее не известно сколько цифр будет в числе).
  */
 public class FoundSumNum {
     public static void main(String[] args) {

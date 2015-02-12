@@ -4,6 +4,8 @@ import static java.lang.Integer.toUnsignedString;
 
 /**
  * Created by Андрей on 11.02.2015.
+ * •	Создать класс, который будет хранить в одной целочисленной переменной несколько значений меньшей длины.
+ * Например, возраст, вес, рост и год рождения. Добавить методы получения и добавления параметров отдельно.
  */
 public class Encryption {
     public static void main(String[] args) {

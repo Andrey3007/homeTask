@@ -2,6 +2,8 @@ package com.sourceit.homework.andrey01.tasc9;
 
 /**
  * Created by Андрей on 11.02.2015.
+ * •	Создать программу, выводящую на экран случайно сгенерированное трёхзначное натуральное число
+ * и его наибольшую цифру.
  */
 public class NumXXX {
     public static void main(String[] args) {

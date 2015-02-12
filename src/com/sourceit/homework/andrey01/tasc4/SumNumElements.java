@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * Created by Андрей on 10.02.2015.
+ * •	В переменной n хранится натуральное двузначное число. Создайте программу, вычисляющую и выводящую на экран
+ * сумму цифр числа n(n – вводит пользователь).
  */
 public class SumNumElements {
     public static void main(String[] args) {
