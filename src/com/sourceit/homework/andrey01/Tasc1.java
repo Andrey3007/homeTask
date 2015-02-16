@@ -7,7 +7,7 @@ package com.sourceit.homework.andrey01;
  *                  the local variables (variables in a method).
  */
 public class Tasc1 {
-    int a;           //Я тут исправил. Поставил переменные в статические поля класса.
+    int a;
     char d;
     public static void main(String[] args){
         Tasc1 t= new Tasc1();
