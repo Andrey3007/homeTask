@@ -19,7 +19,7 @@ public class Encryption {
     }
 
     public void setParam(int newParam, int shift){
-        long mask= 0xffff<<shift;
+        long mask= 0xffffL<<shift;
         mask= ~mask;
         storeg=storeg&mask;
         long l=((long)newParam)<<shift;
