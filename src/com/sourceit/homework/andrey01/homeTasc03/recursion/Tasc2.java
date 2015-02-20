@@ -13,10 +13,13 @@ public class Tasc2 {
 
         int i;
         i =15;
-        System.out.print("Ряд чисел Фибоначчи ");
-        for(int a=0; a<(i+1);a++){
-            System.out.print(calculation(a)+" ");
-        }
+        //System.out.print("Ряд чисел Фибоначчи ");
+        System.out.print("15 элемент: ");
+        //for(int a=0; a<(i+1);a++){
+            //System.out.print(calculation(a)+" ");
+        //}
+        System.out.print(calculation(i)+" ");
+
         System.out.print("\n"+"Вызовов расчета четвертого элемента  "+c);
 
     }
