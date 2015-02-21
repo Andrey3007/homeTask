@@ -41,11 +41,5 @@ public class Test {
 
         System.out.println((fract.parseFractionNumber("32/34")).toString());
         System.out.println((fract.parseFractionNumber("32/34")).doubleValue());
-
-        //String s="r/r";
-        //System.out.println(s.indexOf("/"));
-
-
-
     }
 }
