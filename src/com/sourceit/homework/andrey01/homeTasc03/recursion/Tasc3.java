@@ -9,22 +9,28 @@ import java.util.Scanner;
  */
 public class Tasc3 {
     public static void main(String[] args) {
-        System.out.println("Введите число");
-        Scanner scan= new Scanner(System.in);
-        int i= scan.nextInt();
-        calc(i);
-        System.out.print("  "+i);
-    }
-    public static void play(int k){
+        Scanner scan = new Scanner(System.in);
+        int k = scan.nextInt();
+        Tasc3 x = new Tasc3();
+        x.checkNumders(k);
 
     }
-    public static int calc(int b){
-        if(b>2){
-            b=b-1;
-            calc(b);
-            System.out.print("  "+b);
-            return b;
+
+    public void checkNumders(int n) {
+        for (int i = 2; i <= n; i++) {
+            if (isPrime(i, i-1)) {
+                System.out.print(i + " ");
+            }
         }
-        return 2;
+    }
+
+    boolean isPrime(int p, int k) {
+        if (k == 1) {
+            return true;
+        }
+        if (p % k != 0) {
+            return isPrime(p, k - 1);
+        }
+        return false;
     }
 }
