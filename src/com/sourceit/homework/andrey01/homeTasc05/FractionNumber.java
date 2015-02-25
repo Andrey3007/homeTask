@@ -35,12 +35,23 @@ divisor=i;
 
     @Override
     public int compareTo(com.sourceit.hometask.basic.FractionNumber o) {
+        if(doubleValue()>o.doubleValue()){
+            return 1;
+        }
+        if(doubleValue()==o.doubleValue()){
+            return 0;
+        }
+        if(doubleValue()<o.doubleValue()){
+            return -1;
+        }
         return 0;
-    } // Я не понимаю что должен делать этот метод
+    }
 
     @Override
     public String toString() {
         String s=getDividend()+"/"+getDivisor();
         return s;
     }
+
+
 }

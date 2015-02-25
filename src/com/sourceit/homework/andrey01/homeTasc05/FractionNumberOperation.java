@@ -9,23 +9,28 @@ import com.sourceit.hometask.basic.FractionNumber;
 public class FractionNumberOperation implements com.sourceit.hometask.basic.FractionNumberOperation {
     @Override
     public FractionNumber add(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
-        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr = new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
+        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
+                new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
         fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDivisor();
-        fr.divident = ((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend()) + ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend());
+        fr.divident = ((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend())
+                + ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend());
         return fr;
     }
 
     @Override
     public FractionNumber sub(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
-        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr = new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
+        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
+                new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
         fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDivisor();
-        fr.divident = ((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend()) - ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend());
+        fr.divident = ((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend())
+                - ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend());
         return fr;
     }
 
     @Override
     public FractionNumber mul(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
-        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr = new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
+        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
+                new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
         fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDivisor();
         fr.divident = fractionNumber.getDividend() * fractionNumber1.getDividend();
         return fr;
@@ -33,7 +38,8 @@ public class FractionNumberOperation implements com.sourceit.hometask.basic.Frac
 
     @Override
     public FractionNumber div(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
-        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr = new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
+        com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
+                new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
         fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDividend();
         fr.divident = fractionNumber.getDividend() * fractionNumber1.getDivisor();
         return fr;
@@ -41,7 +47,8 @@ public class FractionNumberOperation implements com.sourceit.hometask.basic.Frac
 
     @Override
     public FractionNumber parseFractionNumber(String s) {
-        com.sourceit.homework.andrey01.homeTasc05.FractionNumber frac = new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
+        com.sourceit.homework.andrey01.homeTasc05.FractionNumber frac =
+                new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
         if (s.indexOf("/") < 0) {
             frac.setDividend(Integer.parseInt(s));
             frac.setDivisor(frac.DEFAULT_DIVISOR_VALUE);
