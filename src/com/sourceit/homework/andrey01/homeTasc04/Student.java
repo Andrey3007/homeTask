@@ -4,10 +4,10 @@ package com.sourceit.homework.andrey01.homeTasc04;
  * Created by Андрей on 13.02.2015.
  */
 public class Student extends Person {
-    String idNumber;
-    double gpa;
+    private String idNumber;
+    private double gpa;
 
-    Student(String name, int age, String gender, String idNumber, double gpa){
+    protected Student(String name, int age, String gender, String idNumber, double gpa){
         super(name, age, gender);
         setIdNumber(idNumber);
         setGpa(gpa);

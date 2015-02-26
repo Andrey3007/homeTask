@@ -4,11 +4,11 @@ package com.sourceit.homework.andrey01.homeTasc04;
  * Created by Андрей on 13.02.2015.
  */
 public class Person {
-    String name;
-    int age;
-    String gender;
+    private String name;
+    private int age;
+    private String gender;
 
-     Person(String name, int age, String gender){
+    protected Person(String name, int age, String gender){
         setName(name);
         setAge(age);
         setGender(gender);

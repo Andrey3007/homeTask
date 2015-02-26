@@ -4,10 +4,10 @@ package com.sourceit.homework.andrey01.homeTasc04;
  * Created by Андрей on 13.02.2015.
  */
 public class CollegeStudent extends Student {
-    int year;
-    String major;
+    private int year;
+    private String major;
 
-    CollegeStudent(String name, int age, String gender, String idNumber, double gpa, int year, String major){
+    protected CollegeStudent(String name, int age, String gender, String idNumber, double gpa, int year, String major){
         super(name, age, gender, idNumber, gpa);
         setYear(year);
         setMajor(major);
