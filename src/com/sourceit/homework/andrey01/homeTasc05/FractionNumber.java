@@ -5,8 +5,8 @@ package com.sourceit.homework.andrey01.homeTasc05;
  */
 public class FractionNumber implements com.sourceit.hometask.basic.FractionNumber {
     static int 	DEFAULT_DIVISOR_VALUE=1;
-    int divident;
-    int divisor;
+    private int divident;
+    private int divisor;
 
     @Override
     public void setDividend(int i) {

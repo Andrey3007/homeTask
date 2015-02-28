@@ -11,9 +11,9 @@ public class FractionNumberOperation implements com.sourceit.hometask.basic.Frac
     public FractionNumber add(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
         com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
                 new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
-        fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDivisor();
-        fr.divident = ((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend())
-                + ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend());
+        fr.setDivisor(fractionNumber.getDivisor() * fractionNumber1.getDivisor());
+        fr.setDividend(((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend())
+                + ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend()));
         return fr;
     }
 
@@ -21,9 +21,9 @@ public class FractionNumberOperation implements com.sourceit.hometask.basic.Frac
     public FractionNumber sub(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
         com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
                 new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
-        fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDivisor();
-        fr.divident = ((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend())
-                - ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend());
+        fr.setDivisor(fractionNumber.getDivisor() * fractionNumber1.getDivisor());
+        fr.setDividend(((fr.getDivisor() / fractionNumber.getDivisor()) * fractionNumber.getDividend())
+                - ((fr.getDivisor() / fractionNumber1.getDivisor()) * fractionNumber1.getDividend()));
         return fr;
     }
 
@@ -31,8 +31,8 @@ public class FractionNumberOperation implements com.sourceit.hometask.basic.Frac
     public FractionNumber mul(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
         com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
                 new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
-        fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDivisor();
-        fr.divident = fractionNumber.getDividend() * fractionNumber1.getDividend();
+        fr.setDivisor(fractionNumber.getDivisor() * fractionNumber1.getDivisor());
+        fr.setDividend( fractionNumber.getDividend() * fractionNumber1.getDividend());
         return fr;
     }
 
@@ -40,8 +40,8 @@ public class FractionNumberOperation implements com.sourceit.hometask.basic.Frac
     public FractionNumber div(FractionNumber fractionNumber, FractionNumber fractionNumber1) {
         com.sourceit.homework.andrey01.homeTasc05.FractionNumber fr =
                 new com.sourceit.homework.andrey01.homeTasc05.FractionNumber();
-        fr.divisor = fractionNumber.getDivisor() * fractionNumber1.getDividend();
-        fr.divident = fractionNumber.getDividend() * fractionNumber1.getDivisor();
+        fr.setDivisor(fractionNumber.getDivisor() * fractionNumber1.getDividend());
+        fr.setDividend(fractionNumber.getDividend() * fractionNumber1.getDivisor());
         return fr;
     }
 
