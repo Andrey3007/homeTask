@@ -12,19 +12,19 @@ public class StringUtils implements com.sourceit.hometask.exceptions.StringUtils
     @Override
     public double div(String s, String s1) throws NullPointerException, NumberFormatException, ArithmeticException {
         String s2 = "null";
-        if (s2.equals(s)) throw new NullPointerException();
-        if (s2.equals(s1)) throw new NullPointerException();
+        if (s2.equals(s)) throw new NullPointerException("NullPointerException: number1 are equal null");
+        if (s2.equals(s1)) throw new NullPointerException("NullPointerException: number2 are equal null");
         double i = (Double.parseDouble(s));
         double k = (Double.parseDouble(s1));
-        if (k == 0) throw new ArithmeticException();
+        if (k == 0) throw new ArithmeticException("ArithmeticException: divisor are equal 0");
         return i / k;
     }
 
     @Override
     public int[] findWord(String s, String s1) throws NullPointerException {
         String s2 = "null";
-        if (s2.equals(s)) throw new NullPointerException();
-        if (s2.equals(s1)) throw new NullPointerException();
+        if (s2.equals(s)) throw new NullPointerException("NullPointerException: s= null");
+        if (s2.equals(s1)) throw new NullPointerException("NullPointerException: s1= null");
         ArrayList list = new ArrayList<Integer>();
         int m = 0;
         int t = 0;
@@ -37,7 +37,8 @@ public class StringUtils implements com.sourceit.hometask.exceptions.StringUtils
             }
             m++;
         }
-        if ((list.toArray()).length == 0) throw new NullPointerException();
+        if ((list.toArray()).length == 0) throw new NullPointerException("NullPointerException: " +
+                "there is no occurrence of finding word");
         int[] a = new int[(list.toArray()).length];
         for (int i = 0; i < a.length; i++) {
             a[i] = (int) ((list.toArray())[i]);
@@ -69,7 +70,7 @@ public class StringUtils implements com.sourceit.hometask.exceptions.StringUtils
         for (int r = 0; r < ((list.toArray()).length); r++) {
             db[r] = ((double) ((list.toArray())[r]));
         }
-        //if(list.toArray().length==0) throw new CustomException(); // this line does not work
+        if(list.toArray().length==0) throw new CustomException("no double value was found in the text");
         return db;
     }
 }

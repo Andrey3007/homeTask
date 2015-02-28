@@ -9,13 +9,13 @@ public class TestTH6 {
     public static void main(String[] args) throws CustomException {
         StringUtils stringUtils = new StringUtils();
         try {
-            System.out.println(stringUtils.div("7", "2"));
+            System.out.println(stringUtils.div("5", "2"));
         } catch (NullPointerException a) {
-            System.out.println("NullPointerException: number1 or number2 are equal null");
+            System.out.println(a.getMessage());
         } catch (NumberFormatException a) {
             System.out.println("NumberFormatException:  number1 or number2 are not a numbers");
         } catch (ArithmeticException a) {
-            System.out.println("ArithmeticException:  number2 is equal 0");
+            System.out.println(a.getMessage());
         }
 
         String s1 = "3 ter ret tre ert ter";
@@ -27,19 +27,20 @@ public class TestTH6 {
                 System.out.print(a[i] + " ");
             }
         } catch (NullPointerException q) {
-            System.out.println("text or word are equal null, or there is no occurrence of finding word");
+            System.out.println(q.getMessage());
         }
 
 
 
         System.out.println();
-
+        String s3= " ";
+        String s4= "5,9 g 4,7 hh 46,678";
         try {
-            for(int i=0; i<(stringUtils.findNumbers("5,9 g 4,7 hh 46,678")).length; i++){
-                System.out.print(stringUtils.findNumbers("5,9 g 4,7 hh 46,678")[i]+"  ");
+            for(int i=0; i<(stringUtils.findNumbers(s3)).length; i++){
+                System.out.print(stringUtils.findNumbers(s3)[i]+"  ");
             }
         }catch (CustomException a){
-            System.out.println("no double value was found in the text");
+            System.out.println(a.getMessage());
         }
     }
 }
