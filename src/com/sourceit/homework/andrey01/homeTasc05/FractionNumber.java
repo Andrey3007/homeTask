@@ -4,7 +4,6 @@ package com.sourceit.homework.andrey01.homeTasc05;
  * Created by Андрей on 21.02.2015.
  */
 public class FractionNumber implements com.sourceit.hometask.basic.FractionNumber {
-    static int 	DEFAULT_DIVISOR_VALUE=1;
     private int divident;
     private int divisor;
 
