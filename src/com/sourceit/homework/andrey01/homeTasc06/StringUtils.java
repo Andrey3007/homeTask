@@ -26,17 +26,18 @@ public class StringUtils implements com.sourceit.hometask.exceptions.StringUtils
         if (s2.equals(s)) throw new NullPointerException("NullPointerException: s= null");
         if (s2.equals(s1)) throw new NullPointerException("NullPointerException: s1= null");
         ArrayList list = new ArrayList<Integer>();
+        ArrayList listStr= new ArrayList<String>();
         int m = 0;
-        int t = 0;
-        for (; true; ) {
-            if ((-1) == (s.indexOf(s1, t))) {
-                break;
-            } else {
-                list.add(s.indexOf(s1, t));
-                t = ((int) ((list.toArray())[m])) + 1;
-            }
+        String[] strings;
+        strings= s.split(" ");
+        for(String x: strings){
+           if(x.equals(s1)) {
+               list.add(m);
+           }
             m++;
         }
+
+
         if ((list.toArray()).length == 0) throw new NullPointerException("NullPointerException: " +
                 "there is no occurrence of finding word");
         int[] a = new int[(list.toArray()).length];
