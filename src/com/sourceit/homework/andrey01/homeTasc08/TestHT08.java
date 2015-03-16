@@ -20,9 +20,13 @@ public class TestHT08 {
 
         String source = "C:\\workSpace\\homeTask\\resources\\GOPR6218.MP4";
         String destination = "C:\\workSpace\\homeTask\\resources\\newDestination.MP4";
+        String destination01 = "C:\\workSpace\\homeTask\\resources\\newDestination01.MP4";
 
         File sourceFile = new File("C:\\workSpace\\homeTask\\resources\\GOPR6218.MP4");
         File destinationFile = new File("C:\\workSpace\\homeTask\\resources\\newDestination.MP4");
+        File destinationFile02 = new File("C:\\workSpace\\homeTask\\resources\\newDestination02.MP4");
+
+
         long start;
         long end;
 
@@ -101,7 +105,7 @@ public class TestHT08 {
 
         start = System.nanoTime();
         try {
-            filesCopy.copyFile(source, destination);
+            filesCopy.copyFile(source, destination01);
         } catch (FileAlreadyPresentsException a) {
             System.out.println(a.getMessage());
         } catch (FileCopyFailedException e) {
@@ -114,7 +118,7 @@ public class TestHT08 {
 
         start = System.nanoTime();
         try {
-            filesCopy.copyFile(sourceFile, destinationFile);
+            filesCopy.copyFile(sourceFile, destinationFile02);
         } catch (FileAlreadyPresentsException a) {
             System.out.println(a.getMessage());
         } catch (FileCopyFailedException e) {
