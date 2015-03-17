@@ -17,22 +17,16 @@ import java.nio.file.Paths;
 public class CopyFileStrategyImpl4 implements CopyFileStrategy {
     @Override
     public void copyFile(String s, String s1) throws FileAlreadyPresentsException, FileCopyFailedException {
-        try {
-            Path pathSource = Paths.get(s);
-            Path pathDestination = Paths.get(s1);
-            Files.copy(pathSource, pathDestination);
-        } catch (FileAlreadyExistsException e) {
-            throw new FileAlreadyPresentsException("File is already present");
-        } catch (IOException e) {
-            System.err.println("yew");
-            e.printStackTrace();
-        }
-
-
+        File file = new File(s);
+        File file1 = new File(s1);
+        copyFile(file, file1);
     }
 
     @Override
     public void copyFile(File file, File file1) throws FileAlreadyPresentsException, FileCopyFailedException {
+        if (file1 != null && file1.exists()) {
+            throw new FileAlreadyPresentsException("File is already present");
+        }
         try {
             Files.copy(file.toPath(), file1.toPath());
         } catch (FileAlreadyExistsException e) {

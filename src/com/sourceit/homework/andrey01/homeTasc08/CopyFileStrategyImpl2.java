@@ -12,23 +12,16 @@ import java.io.*;
 public class CopyFileStrategyImpl2 implements CopyFileStrategy {
     @Override
     public void copyFile(String s, String s1) throws FileAlreadyPresentsException, FileCopyFailedException {
-        try (BufferedInputStream bufIn = new BufferedInputStream(new FileInputStream(s));
-             BufferedOutputStream bufOut = new BufferedOutputStream(new FileOutputStream(s1))) {
-            int i;
-            for (; (i = bufIn.read()) != -1; ) {
-                bufOut.write(i);
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        throw new FileAlreadyPresentsException("File is already present");
+        File file = new File(s);
+        File file1 = new File(s1);
+        copyFile(file, file1);
     }
 
     @Override
     public void copyFile(File file, File file1) throws FileAlreadyPresentsException, FileCopyFailedException {
+        if (file1 != null && file1.exists()) {
+            throw new FileAlreadyPresentsException("File is already present");
+        }
         try (BufferedInputStream bufIn = new BufferedInputStream(new FileInputStream(file.getAbsolutePath()));
              BufferedOutputStream bufOut = new BufferedOutputStream(new FileOutputStream(file1.getAbsolutePath()))) {
             int i;
@@ -41,6 +34,5 @@ public class CopyFileStrategyImpl2 implements CopyFileStrategy {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        throw new FileAlreadyPresentsException("File is already present");
     }
 }

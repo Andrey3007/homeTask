@@ -16,19 +16,16 @@ import java.nio.channels.FileChannel;
 public class CopyFileStrategyImpl3 implements CopyFileStrategy {
     @Override
     public void copyFile(String s, String s1) throws FileAlreadyPresentsException, FileCopyFailedException {
-        try (FileChannel in = new FileInputStream(s).getChannel();
-             FileChannel out = new FileOutputStream(s1).getChannel()) {
-            out.transferFrom(in, 0, in.size());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        throw new FileAlreadyPresentsException("File is already present");
+        File file = new File(s);
+        File file1 = new File(s1);
+        copyFile(file, file1);
     }
 
     @Override
     public void copyFile(File file, File file1) throws FileAlreadyPresentsException, FileCopyFailedException {
+        if (file1 != null && file1.exists()) {
+            throw new FileAlreadyPresentsException("File is already present");
+        }
         try (FileChannel in = new FileInputStream(file.getAbsolutePath()).getChannel();
              FileChannel out = new FileOutputStream(file1.getAbsolutePath()).getChannel()) {
             out.transferFrom(in, 0, in.size());
@@ -37,6 +34,5 @@ public class CopyFileStrategyImpl3 implements CopyFileStrategy {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        throw new FileAlreadyPresentsException("File is already present");
     }
 }
