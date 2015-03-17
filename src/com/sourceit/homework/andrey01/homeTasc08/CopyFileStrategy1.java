@@ -10,35 +10,27 @@ import java.io.*;
  * Created by Андрей on 15.03.2015.
  */
 public class CopyFileStrategy1 implements CopyFileStrategy {
+
     @Override
     public void copyFile(String s, String s1) throws FileAlreadyPresentsException, FileCopyFailedException {
-        try (FileInputStream in = new FileInputStream(s); FileOutputStream out = new FileOutputStream(s1)) {
-            int read;
-            for (; (read = in.read()) != -1; ) {
-                out.write(read);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        throw new FileAlreadyPresentsException("File is already present");
+        File file = new File(s);
+        File file1 = new File(s1);
+        copyFile(file, file1);
 
     }
 
     @Override
     public void copyFile(File file, File file1) throws FileAlreadyPresentsException, FileCopyFailedException {
-        try (FileInputStream in = new FileInputStream(file.getAbsolutePath());
-             FileOutputStream out = new FileOutputStream(file1.getAbsolutePath())) {
+        if (file1 != null && file1.exists()) {
+            throw new FileAlreadyPresentsException("File is already present");
+        }
+        try (FileInputStream in = new FileInputStream(file); FileOutputStream out = new FileOutputStream(file1)) {
             int read;
             for (; (read = in.read()) != -1; ) {
                 out.write(read);
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        throw new FileAlreadyPresentsException("File is already present");
     }
 }
